@@ -18,7 +18,10 @@ class AuthView extends StatelessWidget {
              Container(
                //padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
                margin: const EdgeInsets.fromLTRB(32, 0, 32, 40),
-
+               decoration: const BoxDecoration(
+                   border: Border(
+                     bottom: BorderSide( color: Color(0xFF35AAFF), width: 1.0, style: BorderStyle.solid)
+                   ),),
 
                  child: Row(
                    children: [
@@ -43,13 +46,17 @@ class AuthView extends StatelessWidget {
              ),
              Container(
                margin: const EdgeInsets.fromLTRB(32, 0, 32, 32),
-               decoration: BoxDecoration(boxShadow: [BoxShadow (color: Colors.green, )],),
+               decoration:
+               const BoxDecoration(
+                 color: Colors.white,
+                 borderRadius: BorderRadius.all( Radius.circular(8.0)),
+                 boxShadow: [BoxShadow (color: Color(0xFFEEEEEE), blurRadius: 8)],),
                child: const TextField(
                 decoration:
                 InputDecoration(
                     border: OutlineInputBorder(borderRadius: BorderRadius.all (Radius.circular(8.0)),),
                 enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey, width: 0),
+                borderSide: BorderSide(color: Colors.white, width: 0),
                 borderRadius: BorderRadius.all (Radius.circular(8.0)),),
                     labelText: 'Имя',
                     labelStyle: TextStyle( fontSize: 16, color: Color(0xFFB3B3B3), fontFamily: 'Mulish', fontWeight: FontWeight.w400)),
@@ -57,11 +64,16 @@ class AuthView extends StatelessWidget {
              ),
              Container(
                margin: const EdgeInsets.fromLTRB(32, 0, 32, 32),
+               decoration:
+               const BoxDecoration(
+                 color: Colors.white,
+                 borderRadius: BorderRadius.all( Radius.circular(8.0)),
+                 boxShadow: [BoxShadow (color: Color(0xFFEEEEEE), blurRadius: 8)],),
                child: const TextField(
                  decoration: InputDecoration(
                      border: OutlineInputBorder(borderRadius: BorderRadius.all (Radius.circular(8.0)),),
                      enabledBorder: OutlineInputBorder(
-                       borderSide: BorderSide(color: Colors.grey, width: 0),
+                       borderSide: BorderSide(color: Colors.white, width: 0),
                        borderRadius: BorderRadius.all (Radius.circular(8.0)),),
                      labelText: 'Email',
                      labelStyle: TextStyle( fontSize: 16, color: Color(0xFFB3B3B3), fontFamily: 'Mulish', fontWeight: FontWeight.w400)),
@@ -69,14 +81,19 @@ class AuthView extends StatelessWidget {
              ),
              Container(
                margin: const EdgeInsets.fromLTRB(32, 0, 32, 32),
+               decoration:
+               const BoxDecoration(
+                 color: Colors.white,
+                 borderRadius: BorderRadius.all( Radius.circular(8.0)),
+                 boxShadow: [BoxShadow (color: Color(0xFFEEEEEE), blurRadius: 8)],),
                child: const TextField(
                    obscureText: true,
                    decoration: InputDecoration(
                        border: OutlineInputBorder(borderRadius: BorderRadius.all (Radius.circular(8.0)),),
                      enabledBorder: OutlineInputBorder(
-                       borderSide: BorderSide(color: Colors.grey, width: 0),
+                       borderSide: BorderSide(color: Colors.white, width: 0),
                        borderRadius: BorderRadius.all (Radius.circular(8.0)),),
-                     suffixIcon: Icon(Icons.visibility_off_outlined),
+                     suffixIcon: Icon(Icons.visibility_off_outlined, size: 31, color: Color(0xFF35AAFF)),
 
                      labelText: 'Пароль',
                      labelStyle: TextStyle( fontSize: 16, color: Color(0xFFB3B3B3), fontFamily: 'Mulish', fontWeight: FontWeight.w400)),
@@ -84,14 +101,19 @@ class AuthView extends StatelessWidget {
              ),
              Container(
                margin: const EdgeInsets.fromLTRB(32, 0, 32, 32),
+               decoration:
+               const BoxDecoration(
+                 color: Colors.white,
+                 borderRadius: BorderRadius.all( Radius.circular(8.0)),
+                 boxShadow: [BoxShadow (color: Color(0xFFEEEEEE), blurRadius: 8)],),
                child: const TextField(
                  obscureText: true,
                  decoration: InputDecoration(
                      border: OutlineInputBorder(borderRadius: BorderRadius.all (Radius.circular(8.0)),),
                      enabledBorder: OutlineInputBorder(
-                       borderSide: BorderSide(color: Colors.grey, width: 0),
+                       borderSide: BorderSide(color: Colors.white, width: 0),
                        borderRadius: BorderRadius.all (Radius.circular(8.0)),),
-                     suffixIcon: Icon(Icons.visibility_off_outlined),
+                     suffixIcon: Icon(Icons.visibility_off_outlined, size: 31, color: Color(0xFF35AAFF)),
                      labelText: 'Повторите пароль',
                      labelStyle: TextStyle( fontSize: 16, color: Color(0xFFB3B3B3), fontFamily: 'Mulish', fontWeight: FontWeight.w400)),
                ),
@@ -148,6 +170,7 @@ class AuthView extends StatelessWidget {
 
   }
 }
+
 
 class User {
   final String userName;
